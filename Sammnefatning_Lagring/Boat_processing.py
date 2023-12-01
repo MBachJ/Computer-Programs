@@ -13,7 +13,7 @@ import time
 DATABASE = "ships_data.db"
 
 def extract_ship_data(line):
-    # Oppdatert mønster for å matche det nye formatet
+    # Mønster koden skal kjenne igjen i dataen fra deteksjon
     pattern = r"(\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2})\s+boat\s+(\d\.\d+)\s+(detected_ship.*?\.jpg)\/(detected_ship.*?\.jpg)\s+Box coordinates: \[UPPER LEFT\((\d+), (\d+)\), LOWER RIGHT\((\d+), (\d+)\)\]\s+Coords: \((\d+\.\d+), (\d+\.\d+)\)"
     print("Reading file...")
     match = re.match(pattern, line)
